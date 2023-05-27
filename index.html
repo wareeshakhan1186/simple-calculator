@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .calculator {
+      width: 200px;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin: 0 auto;
+    }
+    .calculator input {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 5px;
+      font-size: 16px;
+    }
+    .calculator button {
+      width: 48%;
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="operand1" placeholder="Operand 1">
+    <input type="text" id="operand2" placeholder="Operand 2">
+    <button onclick="add()">+</button>
+    <button onclick="subtract()">-</button>
+    <button onclick="multiply()">*</button>
+    <button onclick="divide()">/</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function add() {
+      var operand1 = parseFloat(document.getElementById("operand1").value);
+      var operand2 = parseFloat(document.getElementById("operand2").value);
+      var result = operand1 + operand2;
+      document.getElementById("result").innerHTML = "Result: " + result;
+    }
+
+    function subtract() {
+      var operand1 = parseFloat(document.getElementById("operand1").value);
+      var operand2 = parseFloat(document.getElementById("operand2").value);
+      var result = operand1 - operand2;
+      document.getElementById("result").innerHTML = "Result: " + result;
+    }
+
+    function multiply() {
+      var operand1 = parseFloat(document.getElementById("operand1").value);
+      var operand2 = parseFloat(document.getElementById("operand2").value);
+      var result = operand1 * operand2;
+      document.getElementById("result").innerHTML = "Result: " + result;
+    }
+
+    function divide() {
+      var operand1 = parseFloat(document.getElementById("operand1").value);
+      var operand2 = parseFloat(document.getElementById("operand2").value);
+      var result = operand1 / operand2;
+      document.getElementById("result").innerHTML = "Result: " + result;
+    }
+  </script>
+</body>
+</html>
